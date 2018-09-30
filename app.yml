@@ -16,14 +16,15 @@
 # See https://cloud.google.com/appengine/docs/managed-vms/config for details.
 
 # [START django_app]
-runtime: python36
+runtime: python27
 api_version: 1
 threadsafe: yes
 
 handlers:
 - url: /static
   static_dir: static/
-- url: .*
+- url: /.*
+  script: main.application
 
 # Only pure Python libraries can be vendored
 # Python libraries that use C extensions can
@@ -31,4 +32,7 @@ handlers:
 libraries:
 - name: MySQLdb
   version: 1.2.5
+
+env_variables:
+DJANGO_SETTINGS_MODULE: 'diary.settings'
 # [END django_app]
