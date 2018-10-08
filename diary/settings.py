@@ -25,7 +25,10 @@ SECRET_KEY = '5gqq$jm)u@m(szm246h4r3gu-hid0c0+f&m2+!ima^2u!vu9ne'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "http://www.d-diary.tk/",
+    "127.0.0.1"
+]
 
 
 # Application definition
